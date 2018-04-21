@@ -1,0 +1,32 @@
+#info{
+    padding:20px;
+    color:white;
+    background-color:#3A539B;
+}
+
+.info_c{
+    font-size:30px;
+    margin:10px;
+}
+
+#album_art{
+    border-radius:5px;
+    border-color: #444444;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.info_c.imp{
+    font-size:40px;
+    font-weight:bold;
+    color:#F4D03F;
+}
+
+.info_c.linked{
+    transition:0.2s;
+}
+
+.info_c.linked:hover{
+    color:#F4D03F;
+    cursor:pointer;
+}
