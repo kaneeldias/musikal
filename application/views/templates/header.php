@@ -52,6 +52,13 @@
                 font-weight:bold;
                 letter-spacing:5px;
             }
+
+
+            .imp_text{
+                color:#F4D03F;
+                font-size:30px
+            }
+
         </style>
 
     </div>
@@ -61,6 +68,9 @@
     <script type="text/javascript" src="<?php echo base_url("assets/scripts/ng-controllers/searchController.js")?>"></script>
     <script type="text/javascript" src="<?php echo base_url("assets/scripts/ng-controllers/viewSongController.js")?>"></script>
     <script type="text/javascript" src="<?php echo base_url("assets/scripts/ng-controllers/viewAlbumController.js")?>"></script>
+
+    <link rel='stylesheet' type='text/css' href="<?php echo base_url("assets/css/tables.css")?>">
+
 
     <script>
         app.config(function($routeProvider) {

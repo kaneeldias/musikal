@@ -84,4 +84,31 @@ class Search extends CI_Controller {
 		$jsonReply['date'] = substr($json->date, 0, 4);
 		echo json_encode($jsonReply);
 	}
+
+
+	public function songsInAlbum()
+	{
+		$jsonReply = [];
+
+		$this->load->library('RequestsLib');
+
+		$r = json_decode($this->input->raw_input_stream);
+		$id = $r->id;
+
+		$response = Requests::get('http://musicbrainz.org/ws/2/recording/?query=reid:'.$id.'&fmt=json');
+		$json = json_decode($response->body);
+		$track_no = 0;
+		foreach($json->recordings as $recording){
+			$arr = [];
+			$arr['id'] = $recording->id;
+			$arr['title'] = $recording->title;
+			$arr['artists'] = [];
+			foreach($recording->{'artist-credit'} as $artist){
+				array_push($arr['artists'], $artist->artist->name);
+			}
+			$arr['track_no'] = ++$track_no;
+			array_push($jsonReply, $arr);
+		}
+		echo json_encode($jsonReply);
+	}
 }

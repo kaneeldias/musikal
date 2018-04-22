@@ -1,7 +1,7 @@
 app.controller("searchController", function($scope, $http, $rootScope, $location) {
 
-    $scope.title = "sucks";
-    $scope.artist = "dinithi";
+    $scope.title = "";
+    $scope.artist = "";
 
     $scope.searched = false;
     $scope.loading = false;

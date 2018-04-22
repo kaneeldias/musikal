@@ -1,0 +1,36 @@
+.table_header td{
+    background-color:#F4D03F;
+    padding:16px;
+    font-weight:bold;
+    border-bottom-color: #444444;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+table td{
+    padding:16px;
+    padding-left:20px;
+    padding-right:20px;
+    border-bottom-color: #444444;
+    border-bottom-width: 0px;
+    border-bottom-style: solid;
+}
+
+#result_table{
+    background-color:#FFFFFF;
+    border-color: #444444;
+    border-width: 3px;
+    border-style: solid;
+    transition:all 0.2s;
+    margin:20px;
+    border-radius:5px;
+}
+
+.table_info{
+    transition:all 0.2s;
+}
+
+.table_info:hover{
+    cursor:pointer;
+    background-color:#DDDDDD;
+}

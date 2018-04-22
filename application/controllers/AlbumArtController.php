@@ -12,7 +12,6 @@ class AlbumArtController extends CI_Controller {
 		$id = $r->id;
 
 		$response = Requests::get('https://coverartarchive.org/release/'.$id);
-
 		$json = json_decode($response->body);
 		$jsonReply['url'] = $json->images[0]->thumbnails->small;
 		echo json_encode($jsonReply);

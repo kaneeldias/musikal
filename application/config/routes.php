@@ -59,5 +59,6 @@ $route['search/recording'] = 'search/recording';
 
 $route['view/song'] = 'viewController/song';
 $route['view/album'] = 'viewController/album';
+$route['view/songsInAlbum'] = 'viewController/songsInAlbum';
 
 $route['AlbumArt'] = 'albumArtController';
