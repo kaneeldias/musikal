@@ -28,6 +28,7 @@ class Search extends CI_Controller {
 		foreach($json->recordings as $recording){
 			$arr = [];
 			$arr['title'] = $recording->title;
+			$arr['length'] = (int)($recording->length / 60000) . ":" . sprintf("%02d", (int)($recording->length % 60000 / 1000));
 			$arr['artists'] = [];
 			foreach($recording->{'artist-credit'} as $artist){
 				array_push($arr['artists'], $artist->artist->name);
@@ -102,6 +103,8 @@ class Search extends CI_Controller {
 			$arr = [];
 			$arr['id'] = $recording->id;
 			$arr['title'] = $recording->title;
+			$arr['length'] = (int)($recording->length / 60000) . ":" . sprintf("%02d", (int)($recording->length % 60000 / 1000));
+			//$arr['length'] = "" + (int)($recording->length / 60000) + (int)(($recording->length % 60000)/1000);
 			$arr['artists'] = [];
 			foreach($recording->{'artist-credit'} as $artist){
 				array_push($arr['artists'], $artist->artist->name);
