@@ -84,6 +84,9 @@
                 .when("/song/:song_id", {
                     templateUrl: '<?php echo base_url("view/song")?>'
                 })
+                .when("/artist/:artist_id", {
+                    templateUrl: '<?php echo base_url("view/artist")?>'
+                })
                 .when("/album/:album", {
                     templateUrl: '<?php echo base_url("view/album")?>'
                 });

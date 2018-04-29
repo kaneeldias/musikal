@@ -68,6 +68,10 @@ app.controller("viewAlbumController", function($scope, $http, $location) {
         $location.path('/song/'+artist.replace(/\ /g, '_')+'-'+title.replace(/\ /g, '_')).search({id:id});
     };
 
+    $scope.view_artist = function(artist, artist_id){
+        $location.path('/artist/'+artist.replace(/\ /g, '_')).search({id:artist_id});
+    };
+
     init();
 
     /*$scope.$on('open_panel', function(event, id) {

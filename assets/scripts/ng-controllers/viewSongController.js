@@ -11,6 +11,10 @@ app.controller("viewSongController", function($scope, $http, $location) {
         date: ""
     };
 
+    $scope.view_artist = function(artist, artist_id){
+        $location.path('/artist/'+artist.replace(/\ /g, '_')).search({id:artist_id});
+    };
+
     $scope.view_album = function(album, album_id){
         $location.path('/album/'+album.replace(/\ /g, '_')).search({id:album_id});
     };

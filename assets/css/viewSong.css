@@ -22,11 +22,11 @@
     color:#F4D03F;
 }
 
-.info_c.linked{
+.linked{
     transition:0.2s;
 }
 
-.info_c.linked:hover{
+.linked:hover{
     color:#F4D03F;
     cursor:pointer;
 }

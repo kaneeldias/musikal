@@ -8,11 +8,7 @@
         </div>
         <div layout="column" layout-align="center start">
             <div class="info_c imp">{{info.title}}</div>
-            <div class="info_c">
-                <span ng-repeat="artist in info.artists">
-                    <span class="linked" ng-click="view_artist(artist.name, artist.id)">{{artist.name}}</span><span>{{$last ? '' : ', '}}</span>
-                </span>
-            </div>
+            <div class="info_c">{{info.artists.join(", ");}}</div>
             <div class="info_c linked" ng-click="view_album(info.album, info.album_id)">{{info.album}}</div>
             <div class="info_c">{{info.date}}</div>
         </div>

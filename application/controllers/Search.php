@@ -58,7 +58,10 @@ class Search extends CI_Controller {
 		$jsonReply['title'] = $json->recordings[0]->title;
 		$jsonReply['artists'] = [];
 		foreach($json->recordings[0]->{'artist-credit'} as $artist){
-			array_push($jsonReply['artists'], $artist->artist->name);
+			$arr = [];
+			$arr['name'] = $artist->artist->name;
+			$arr['id'] = $artist->artist->id;
+			array_push($jsonReply['artists'], $arr);
 		}
 		$jsonReply['album'] = $json->recordings[0]->releases[0]->title;
 		$jsonReply['album_id'] = $json->recordings[0]->releases[0]->id;
@@ -79,7 +82,10 @@ class Search extends CI_Controller {
 		$json = json_decode($response->body);
 		$jsonReply['artists'] = [];
 		foreach($json->{'artist-credit'} as $artist){
-			array_push($jsonReply['artists'], $artist->name);
+			$arr = [];
+			$arr['name'] = $artist->artist->name;
+			$arr['id'] = $artist->artist->id;
+			array_push($jsonReply['artists'], $arr);
 		}
 		$jsonReply['album'] = $json->title;
 		$jsonReply['date'] = substr($json->date, 0, 4);
